@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project = "gcp-playground-202401"
+  project = var.gcp_project_name
   region  = "us-central1"
   zone    = "us-central1-c"
 }

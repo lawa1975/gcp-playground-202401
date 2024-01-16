@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "tfstate-bucket" {
-  name                        = "gcp-playground-202401-tfstate-bucket"
+  name                        = "${var.gcp_project_name}-tfstate-bucket"
   location                    = "US"
   storage_class               = "STANDARD"
   uniform_bucket_level_access = true
@@ -11,7 +11,7 @@ resource "google_storage_bucket" "tfstate-bucket" {
 }
 
 resource "google_storage_bucket" "app-data-bucket" {
-  name          = "gcp-playground-202401-app-data-bucket"
+  name          = "${var.gcp_project_name}-app-data-bucket"
   location      = "US"
   force_destroy = true
 
